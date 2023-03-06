@@ -280,3 +280,43 @@ def ConsultaYReportes():
         if eleccion==3: 
 
             Break 
+            
+# Menu principal 
+
+def Menu(): 
+
+    while True: 
+
+        print() 
+
+        print("****BIBLIOTECA****") 
+
+        print() 
+
+        print("1 Registrar nuevo ejemplar") 
+
+        print("2 Consultas y reportes") 
+
+        print("3 Salir") 
+
+        print() 
+
+        var_elect=input("Ingrese algun número: ") 
+
+        if var_elect=="1": 
+
+            RegistrarNuevoEjempar() 
+
+        if var_elect=="2": 
+
+            ConsultaYReportes() 
+
+        elif var_elect=="3": 
+
+            print("Ha salido del programa ") 
+
+            break 
+
+ 
+
+Menu() 
