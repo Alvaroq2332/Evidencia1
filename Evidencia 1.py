@@ -184,3 +184,99 @@ def BusquedaPorTitulo():
                 print(f"{libro[0]:15}|{libro[1]:<20}|{libro[2]:<10}|{libro[3]:<18}|{libro[4]:<13}|{libro[5]} ")
     except:
         pass
+    
+def BusquedaPorISBN(): 
+
+    print() 
+
+    print("**Búsqueda por ISBN***") 
+
+ 
+
+    #Consulta 
+
+    isbn=input("Ingrese el ISBN del libro: ") 
+
+    try: 
+
+        print() 
+
+        print(f"{'Titulo':15}|{'Autor':20}|{'Genero':10}|{'Año Publicacion':<18}|{'ISBN':13}|{'AÑO Adquisicion'}") 
+
+        for libro in libros.values(): 
+
+            if libro[4]==isbn: 
+
+                print(f"{libro[0]:15}|{libro[1]:<20}|{libro[2]:<10}|{libro[3]:<18}|{libro[4]:<13}|{libro[5]} ") 
+
+    except: 
+
+        pass 
+
+ 
+
+#Sub menu para la busqueda por título y ISBN 
+
+def TituloYIsbn(): 
+
+    while True: 
+
+        print() 
+
+        print("***Consulta por título y ISBN*") 
+
+        print() 
+
+        print("1 busqueda por Título") 
+
+        print("2 Busqueda por ISBN") 
+
+        print("3 Volver al menú principal") 
+
+        eleccion=int(input("Elige una opción: ")) 
+
+        if eleccion==1: 
+
+            BusquedaPorTitulo() 
+
+        if eleccion==2: 
+
+            BusquedaPorISBN() 
+
+        if eleccion==3: 
+
+            break 
+
+ 
+
+#Submenu de consultas y reportes  
+
+def ConsultaYReportes(): 
+
+    while True: 
+
+        print() 
+
+        print("****CONSULTA Y REPORTES*****") 
+
+         
+
+        print("1 Consulta de título y ISBN") 
+
+        print("2 Reportes") 
+
+        print("3 Volver al menú principal") 
+
+        eleccion=int(input("Elige una opción: ")) 
+
+        if eleccion==1: 
+
+            TituloYIsbn() 
+
+        if eleccion==2: 
+
+            Reportes() 
+
+        if eleccion==3: 
+
+            Break 
